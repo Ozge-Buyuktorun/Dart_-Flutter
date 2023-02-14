@@ -1,23 +1,31 @@
-/* Örnek 1: İki notu girilen öğrencinin ortalamasını bularak sonucu ekranda gösteren algoritmayı yapın.
-
-Örnek 2: Fiyatı girilen ürüne %18 kdv ekleyerek son fiyatı hesaplayan algoritmayı yazın. */
+//Örnek 1: İki notu girilen öğrencinin ortalamasını bularak sonucu ekranda gösteren algoritmayı yapın.
 
 import 'dart:io';
 
-main(List<String> args) {
-  /* print("Birinci notu giriniz");
-  int birinciNot = int.parse(stdin.readLineSync()!);
+void main(List<String> args) {
+  int birinciNot;
+  int ikinciNot;
+  print("Birinci notu lütfen giriniz:");
+  birinciNot = int.parse(stdin.readLineSync()!); 
+  print("İkinci notu lütfen giriniz: ");
+  ikinciNot= int.parse(stdin.readLineSync()!); //standard input(stdin) reads a line from stdin.
 
-  print("İkinci notu giriniz");
-  int ikinciNot = int.parse(stdin.readLineSync()!);
+  double ortalama = (birinciNot+ikinciNot)/2;
+  print("Not ortalamaniz $ortalama'dir.");
+  if (ortalama < 50)
+  {
+    print(" İlgili dersten kaldiniz.");
+  }
+  else
+  print("İlgili dersten başarı ile geçtiniz!") ;
+}
 
-  double sonuc = (birinciNot + ikinciNot) / 2;
-  print("Ortalamanız $sonuc");
- */
-  //SORU2
-  print("Fiyatı  giriniz");
-  int fiyat = int.parse(stdin.readLineSync()!);
-  double sonFiyat = (fiyat * 18) / 100 + fiyat;
+//Örnek 2: Fiyatı girilen ürüne %18 kdv ekleyerek son fiyatı hesaplayan algoritmayı yazın. */
+import 'dart:io';
 
-  print("son fiyatt $sonFiyat");
+void main(List<String> args) {
+  print("Lütfen ürün fiyatini türk lirası cinsinden giriniz: ");
+  int urunFiyati = int.parse(stdin.readLineSync()!);
+  double kdv = urunFiyati+ (urunFiyati*(18/100));
+  print("KDV dahil edilmiş ürün fiyatı: $kdv türk lirasıdır.");
 }

@@ -1,0 +1,83 @@
+import 'dart:async';
+// soru 1: üç double değişken oluşturup bunun ortalamasını oluşturma.
+void main(List<String> args) {
+    double a = 5.6;
+    double b = 4.2;
+    double c = 8.1;
+for (int i = 0; i<10 ; i++){
+    print("$i'ci döngü için: ");
+    double d;
+    d = ((a + b + c)/3);
+    print("a, b ve c sayilarinin ortalamasi şu şekildedir: ${d.toInt()}");
+    a++;
+    b++;
+    c++;
+}
+}
+// soru2 : Kenarlarını girdiğiniz bir üçgenin çeşidini yazdıran programı yazınız.
+void main(List<String> args) {
+  int kenar1, kenar2, kenar3;
+  kenar1 = 6;
+  kenar2 = 6;
+  kenar3 = 6;
+  if ((kenar1 == kenar2) && ( kenar1 == kenar3)) {
+    print(" Bu üçgen eşkenar üçgendir. Tüm kenarları eşittir.");
+  } else if ((kenar1 != kenar2 ) && (kenar1 != kenar3) && (kenar2 != kenar3))
+      {
+        print(" KEnarlarini girdiğiniz üçgen çeşitkenardir. Bu çeşit kenar bir üçgendir.");
+      }
+      else {
+        print("Kenarlarini girdiğiniz üçgen ikizkenar üçgendir.");
+      }
+}
+
+// soru 3: Vize ve final notlarını alıp dersi geçip geçmediğini bulan program yazınız.
+// // geçme notu alt değeri = 50 ; vizenin %40 finalin %60 ı alınır.
+void main(List<String> args) {
+  int vizeNotu = 30;
+  int finalNotu = 90;
+  double gecmeNotu;
+  gecmeNotu = vizeNotu*(0.4) + finalNotu * (0.6) ;
+  int altNot = 50;
+  if ( gecmeNotu >= altNot)
+  {
+    print("Tebrikler Sınavı başarı ile geçtiniz.");
+  } else 
+  {
+    print(" Puan ortalamanız alt sınır olan $altNot puanı altında kaldı maalesef.");
+  }
+}
+// //soru 4: Kendi adınızı ekrana beş kez yazdıran uygulamayı tüm döngü ifadeleri ile giriniz.
+void main(List<String> args) {
+  String ad = "Özge Büyüktorun";
+  var dongu = ad.length;
+  for (int i = 0 ; i < dongu ; i++) {
+  print(" $i'ncı $ad");
+  }
+}
+
+// soru 5: 1 den 100 e kadar olan ve 15 ile tam bölünen sayıların karelerni ekrana yazdırın. 3 ve 5 e ayrı ayrı bölünebilen sayılardır.
+
+void main(List<String> args) {
+  int i;
+for (i=1 ; i <= 100; i++) {
+  if (( i % 3 == 0) && (i % 5 == 0) && ( i % 15 == 0))
+  { int kare = i * i;
+    print(" $i sayisi 15'in tam katidir ve karesi = $kare 'dir.");
+  } else 
+    continue;
+    }
+}
+
+// soru 6 : Tanımlanan int bir sayının faktoriyelini bulan uygulamayı yazınız.
+void main()
+{
+  int verilenSayi = 5;
+  int faktoriyelDegeri = 1; 
+  for ( int i = 1 ; i <= verilenSayi ; i++ )
+  {
+    faktoriyelDegeri = i * faktoriyelDegeri;
+  }
+  print("Nihai faktoriyel değer: " + faktoriyelDegeri.toString());
+
+}

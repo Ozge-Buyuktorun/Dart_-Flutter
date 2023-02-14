@@ -1,2 +1,15 @@
-# Dart_Flutter
-her bir bölümde farklı konuların örnek çalışmalarını ekledim.
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Dart & Flutter"),
+            "type": "dart",
+            "request": "launch",
+            "program": "${file}", 
+            "console": "terminal" 
+        }
+    ]
+}

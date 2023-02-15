@@ -9,9 +9,9 @@
  * Ayrıca [] kullanarak belli bir indexteki elemanı güncelleyebilirz.
  */
 main(List<String> args) {
-  List<int?> sayilar = [];
-  sayilar.add(1);
-  sayilar.add(2);
+  List<int?> sayilar = []; // ? null olabilecek değerler var demek.
+  sayilar.add(1);  // dinamik yapılarda eleman ekleme
+  sayilar.add(2);   //sabit yapılar olsaydı sayilar[2]=2; diyebilirdik.
   sayilar.add(3);
   sayilar.add(4);
   print(sayilar);
@@ -21,6 +21,7 @@ main(List<String> args) {
   List<int> sayilar2 = [1, 2, 3];
   sayilar2.add(55);
   print(sayilar2);
+  print(sayilar2.length);
 
   List<int> sayilar3 = List.filled(10, 10, growable: true);
   sayilar3.add(55);
@@ -31,5 +32,8 @@ main(List<String> args) {
   List<int> sayilar5 = [];
   sayilar5.add(5);
   sayilar4.add(10);
+
+  print(sayilar5);
+  print(sayilar4);
   
 }

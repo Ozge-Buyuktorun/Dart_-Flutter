@@ -30,3 +30,4 @@ main(List<String> args) {
   sayilar.shuffle(); //Rastgele liste elemanlarının yerini değiştirir.
   print(sayilar);
 }
+//kaynakça:https://api.flutter.dev/flutter/dart-core/dart-core-library.html

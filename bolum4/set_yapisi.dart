@@ -8,15 +8,23 @@
  */
 
 main(List<String> args) {
-  Set<String> isimler = Set();
+  Set<String> isimler = Set(); //isimler setinde string veriler toplamak.
+  // içine string atama with .add();
   isimler.add("emre");
   isimler.add("hasan");
   isimler.add("ali");
   isimler.add("emre");
   isimler.add("emre");
   isimler.add("fatma");
-  
-  bool sonucum = isimler.remove("emre222");
+  if(isimler.contains("ayşe"))
+  {
+    print("set içinde emre kişisi vardır.");
+  }else
+  {
+    print("girilen isim set içinde yer almamaktadır.");
+  }
+
+  bool sonucum = isimler.remove("emre"); // içeride emre varsa onu yok edebilmeye true döner.
   print("sonuc : " + sonucum.toString());
 
   print("*********");
@@ -25,32 +33,15 @@ main(List<String> args) {
     print("isim : $s1");
   }
 
-  Set<int> numaralar = Set.from([
-    1,
-    2,
-    3,
-    4,
-    2,
-    1,
-    5,
-    2,
-    1,
-    4,
-    1,
-    1,
-    1,
-    1,
-  ]);
+  Set<int> numaralar = Set.from([1,2,3,4,5,6,7,8,8,214,45,23,3,8,9,2]);
   List<int> ciftSayilar = [0, 2, 4, 6, 8, 10, 8, 6, 4, 2, 0];
 
   for (int s1 in numaralar) {
     print("no : $s1");
   }
-
   numaralar.clear();
   numaralar.addAll(ciftSayilar);
-
-  for (int s1 in numaralar) {
-    print("add alldan sonra no : $s1");
-  }
-}
+   for (int s1 in numaralar) {     print("add alldan sonra no : $s1");   
+   } 
+   }
+   

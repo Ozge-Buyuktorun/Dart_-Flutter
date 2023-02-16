@@ -15,11 +15,11 @@
  *  Dart dilinde method overloading olmadığı için sadece ya default yapıcı ya da parametreli yapıcı olmalıdır.
  
  *  3- Named (Isimlendirilmiş) : Sınıf içerisinde 
-     SinifAdi.methodAdi(){
-     buraya kodlar gelir.
-     }
-    //Istediniz sayıda isimlendirilmiş kurucu oluşturabilirsiniz. 
- */
+//      SinifAdi.methodAdi(){
+//      buraya kodlar gelir.
+//      }
+//     //Istediniz sayıda isimlendirilmiş kurucu oluşturabilirsiniz. 
+//  */
 
 main(List<String> args) {
   Araba honda = Araba(2020, "Honda", true);
@@ -44,8 +44,8 @@ main(List<String> args) {
   suzuki.yasHesapla();
 }
 
-class Araba {
-  int? modelYili;
+class Araba { //Classtan sonra ( gelmez {} gelir.
+  int? modelYili;  // ? null olabilme ihtimali için.
   String? marka;
   bool? otomatikMi;
 

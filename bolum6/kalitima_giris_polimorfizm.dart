@@ -30,44 +30,36 @@ main(List<String> args) {
   User user5 = AdminUser();
   User user6 = SadeceOkuyabilenNormalUser(); //upcasting yukarı cevrim
 
- 
-}
-
-
-
+ }
 class User {
+// tüm alt sınıfların ortak özelliği bu satırlar. 
   String email = "";
   String password = "";
 
-  void girisYap() {
+  void girisYap() { //function
     print("Parent user giriş yaptı");
   }
 }
-
-class NormalUser extends User {
+class NormalUser extends User { // parent
   void davetEt() {
     print("Normal user arkadaşlarını davet etti");
   }
-
-  @override
-  void girisYap() {
+  @override  //annotations. USer clasındaki giriş yap fonksiyonunu ezer aşağıdaki fonksi.
+  void girisYap() { // yapabildiği yetki alanındaki işlem
     print("Normal user giriş yaptı");
   }
 }
-
-class SadeceOkuyabilenNormalUser extends NormalUser {
+class SadeceOkuyabilenNormalUser extends NormalUser { // Normal Userdan türetilmiş yenii bir sınıf.
   void adiniSoyle() {
     print("Ben sadece okuyabilirim");
   }
-
-  @override
+  @override // tekrar belirlenmesi.
   void girisYap() {
     print("SadeceOkuyabilenNormalUser giriş yaptı");
   }
 }
-
-class AdminUser extends User {
-  @override
+class AdminUser extends User { // Userdan türetilmiş bir class.
+  @override 
   void girisYap() {
     print("Admin user giriş yaptı");
   }

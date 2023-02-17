@@ -1,5 +1,5 @@
 main(List<String> args) {
-  Kisi emre = Kisi("emre", 34);
+  Kisi emre = Kisi("emre", 34); //nesne oluşturmak.
   emre.kendiniTanit();
 
   Calisan hasan = Calisan("hasan", 30, 3000);
@@ -18,9 +18,9 @@ class Kisi {
 class Calisan extends Kisi {
   int maas;
 
-  Calisan(String name, int age, this.maas) : super(name, age);
+  Calisan(String name, int age, this.maas) : super(name, age); //super üst sınıfa name ve age'i götürecek.
 
-  @override
+  @override // üst sınıftaki ifade yetersiz gelirse aşağıdaki çalışır. üstteki kendiniTanıt() fonk. ezdi.
   void kendiniTanit() {
     super.kendiniTanit();
     print("Maaşım da $maas");

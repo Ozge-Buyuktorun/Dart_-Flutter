@@ -54,3 +54,11 @@ main(List<String> args) {
     print("eşit değil");
   }
 }
+
+
+
+// İmmutable: değişmez Final ve cost ile atanırsa bir kez set edilir bir daha değiştirilemez.
+//Final ve const ne zaman tercih edilir?
+// cost ile değiştirilemeyen listeler yapılabilir. Bellek dostu yapılar oluşturulabilir.
+//final ile içi değiştirildiğinde ise adresleme yaptığı bilginin konumu değişir. 
+// final'ı runtime de değer geliyorsa kullanırız. const çalışmadan önce değeri bilinen yapılarda kullanılır. Final ise run time sonrası bir veri gelecekse kullanılır.

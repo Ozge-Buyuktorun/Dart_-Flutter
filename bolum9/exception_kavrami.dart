@@ -14,9 +14,9 @@ main(List<String> args) {
   try {
     int sayi = 100 ~/ int.parse("emre");  //~ işareti ile double değil sadece int kısmını getirir.
     print(sayi);
-  } on IntegerDivisionByZeroException { //bu hata görüldüğünde çalışacak kısım.
+  } on IntegerDivisionByZeroException { //bu hata görüldüğünde çalışacak kısım.Mesajı kendimiz yazacaksak.
     print("Bölen sıfır olamaz");
-  } on FormatException catch (e) {
+  } on FormatException catch (e) { // tanımlı mesaj ve source görüntülensin istiyorsak.
     print(e.message);
     print(e.source);
   } catch (e) { // eğer bir hata oluşursa devam et kısmıdır.

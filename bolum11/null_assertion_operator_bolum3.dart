@@ -16,7 +16,7 @@ main(List<String> args) {
 
   int a = nullOlabilirAmaDegil!;
   int b = nullDegerTutanListe.first!;
-  int c = nullDondurebilirAmaDondurmeyecek()!.abs();
+  int c = nullDondurebilirAmaDondurmeyecek()!.abs(); //abs()mutlak değerini alıyor.
 }
 
 int? nullDondurebilirAmaDondurmeyecek() {

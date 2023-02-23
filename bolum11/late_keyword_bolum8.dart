@@ -8,23 +8,21 @@
  * 
  * Eğer değişkene değer atamadan okumaya çalışırsanız hata alırsınız.
  */
-
 class Yemek {
-  late final String tanim;
+  //tanımlama
+  late final String tanim; //late:calıstırmadan önce initiliaze(atmaasını) yapacağım demek.
   late final int fiyat;
-
+  //functions
   Yemek(int fiyat) {
     this.fiyat = fiyat;
   }
-
   void setTanim(String tanim) {
-    this.tanim = tanim;
+    this.tanim = tanim; //atama işlemi.
   }
 }
-
 main(List<String> args) {
-  final yemegim = Yemek(100);
-  yemegim.setTanim('kuru fasulye');
+  final yemegim = Yemek(100); //fiyat ataması
+  yemegim.setTanim('kuru fasulye'); //tanım ataması.
   print(yemegim.tanim);
   print(yemegim.fiyat);
 }

@@ -7,11 +7,10 @@
  */
 main(List<String> args) {
   List<String> stringListesi = ['emre', 'hasan', 'ali'];
-  List<String>? nullOlabilecekStringListesi ;
+  List<String>? nullOlabilecekStringListesi ; //?: null olabileceğini belirtmek.
   List<String?> nullOlabilecekStringleriTutanListe = ['emre', null, 'hasan'];
 
   print('string listesi $stringListesi');
   print('null olabilecek liste $nullOlabilecekStringListesi');
-  print(
-      'nullOlabilecekStringleriTutanListe $nullOlabilecekStringleriTutanListe');
+  print('nullOlabilecekStringleriTutanListe $nullOlabilecekStringleriTutanListe');
 }
